@@ -24,6 +24,6 @@ model Cast {
   movieId     String   @db.ObjectId
   movie       Movie    @relation(fields: [movieId], references: [id])
   name        String
-  description String
+  description String?
   created_at  DateTime @default(now())
 }
